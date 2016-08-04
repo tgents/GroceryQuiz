@@ -96,7 +96,7 @@ public class QuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (userAnswer == null) {
-                    Toast.makeText(QuizActivity.this, "Please select an answer.", Toast.LENGTH_SHORT);
+                    Toast.makeText(QuizActivity.this, "Please select an answer.", Toast.LENGTH_SHORT).show();
                 } else {
                     quiz.addAnswer(userAnswer);
                     userAnswer = null;
