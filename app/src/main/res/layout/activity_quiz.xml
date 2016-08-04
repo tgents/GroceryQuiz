@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.thomas.groceryquiz.QuizActivity">
+
+    <TextView
+        android:id="@+id/prompt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:text="Prompt"
+        android:textSize="25sp" />
+
+    <ProgressBar
+        android:id="@+id/timer"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/prompt"
+        android:layout_centerVertical="true"
+        android:max="120"
+        android:progress="120" />
+
+    <Button
+        android:id="@+id/submitBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Submit" />
+
+    <GridLayout
+        android:id="@+id/grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/submitBtn"
+        android:layout_below="@id/timer">
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_margin="5dp"
+            android:layout_row="0"
+            android:layout_rowWeight="1"
+            android:padding="5dp" />
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_margin="5dp"
+            android:layout_row="1"
+            android:layout_rowWeight="1"
+            android:padding="5dp" />
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="5dp"
+            android:layout_row="0"
+            android:layout_rowWeight="1"
+            android:padding="5dp" />
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="5dp"
+            android:layout_row="1"
+            android:layout_rowWeight="1"
+            android:padding="5dp" />
+
+    </GridLayout>
+
+
+</RelativeLayout>
